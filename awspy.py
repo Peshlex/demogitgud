@@ -11,3 +11,7 @@ for bucket in s3.buckets.all():
 #Upload a new file
 data = open('test.txt','rb')
 s3.Bucket('plex-ccp-2021-demo').put_object(Key='test.txt', Body=data)
+
+for bucket in s3.buckets.all():
+    print(bucket.name)
+
